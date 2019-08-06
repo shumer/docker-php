@@ -7,8 +7,7 @@ RUN set -xe; \
     npm \
     jq \
     mc \
-    yarn \
-    php-cas
+    yarn
 
 USER wodby
 RUN  git clone --depth=1 https://github.com/Bash-it/bash-it.git /home/wodby/.bash_it;  \
