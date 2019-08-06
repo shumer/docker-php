@@ -7,7 +7,8 @@ RUN set -xe; \
     npm \
     jq \
     mc \
-    yarn
+    yarn \
+    php-ldap
 
 USER wodby
 RUN  git clone --depth=1 https://github.com/Bash-it/bash-it.git /home/wodby/.bash_it;  \
