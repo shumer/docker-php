@@ -8,7 +8,11 @@ RUN set -xe; \
     jq \
     mc \
     yarn \
-    php-ldap
+    php-ldap \
+    openldap-clients \
+    ca-certificates; \
+    wget https://pki.smile.fr/smile2016.crt -O /usr/local/share/ca-certificates/smile2016.crt; \ 
+    update-ca-certificates
 
 USER wodby
 RUN  git clone --depth=1 https://github.com/Bash-it/bash-it.git /home/wodby/.bash_it;  \
