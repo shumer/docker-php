@@ -1,5 +1,5 @@
 
-FROM wodby/drupal-php:7.2
+FROM wodby/php:7.2
 USER root
 
 RUN set -xe; \
