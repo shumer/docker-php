@@ -1,4 +1,3 @@
-
 FROM wodby/php:7.2
 USER root
 
@@ -8,7 +7,6 @@ RUN set -xe; \
     jq \
     mc \
     yarn
-
 
 USER wodby
 RUN  git clone --depth=1 https://github.com/Bash-it/bash-it.git /home/wodby/.bash_it  \
