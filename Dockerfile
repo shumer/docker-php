@@ -1,6 +1,7 @@
 FROM wodby/php:7.2
 USER root
 
+ADD ./files /srv
 RUN set -xe; \
     apk add --update --no-cache \
     npm \
@@ -9,8 +10,9 @@ RUN set -xe; \
     yarn && \
     wget -O drush.phar https://github.com/drush-ops/drush-launcher/releases/download/0.6.0/drush.phar && \
     chmod +x drush.phar && \
-    sudo mv drush.phar /usr/local/bin/drush && \
-    echo "wodby ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
+    mv drush.phar /usr/local/bin/drush && \
+    echo "wodby ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers && \
+    cp -r /srv/usr/local/bin/ /usr/local/
 
 USER wodby
 RUN  git clone --depth=1 https://github.com/Bash-it/bash-it.git /home/wodby/.bash_it  \

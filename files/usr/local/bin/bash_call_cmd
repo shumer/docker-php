@@ -1,0 +1,11 @@
+#!/bin/bash
+BASH_CALL_CMD_ERROR=0
+BASH_CALL_CMD_DEBUG=1
+
+bash_log_cmd "${@}"
+
+if eval "${@}"; then
+    BASH_CALL_CMD_ERROR=0
+else
+    BASH_CALL_CMD_ERROR=1
+fi

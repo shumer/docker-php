@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ -z "$1" ]; then
+    bash_call_cmd "nohup konsole &> /dev/null & disown"
+    return
+fi
+bash_call_cmd "nohup ${@} &> /dev/null & disown"
+

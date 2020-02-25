@@ -1,0 +1,17 @@
+#!/bin/bash
+BASH_LOG_LEVEL=2
+
+
+# Info.
+if [ "${1}" == "0" ]; then
+    printf -- "$2 \x1b[38;2;255;255;255m$3\x1b[0m $4\n";
+fi
+# Success.
+if [ "${1}" == "1" ]; then
+    printf -- "\x1b[38;2;55;255;55m$2\x1b[0m \x1b[38;2;255;255;255m$3\x1b[0m $4\n";
+fi
+# Error.
+if [ "${1}" == "2" ]; then
+    printf -- "\x1b[38;2;255;55;55m$2\x1b[0m \x1b[38;2;255;255;255m$3\x1b[0m $4\n";
+fi
+

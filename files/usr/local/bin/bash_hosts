@@ -1,0 +1,7 @@
+#!/bin/bash
+
+HOSTS_USER=$(stat -c %U /etc/hosts)
+HOSTS_GROUP=$(stat -c %U /etc/hosts)
+bash_call_cmd "sudo chown $(whoami):$(whoami) /etc/hosts"
+bash_call_cmd "echo ${@} >> /etc/hosts"
+bash_call_cmd "sudo chown ${HOSTS_USER}:${HOSTS_GROUP} /etc/hosts"

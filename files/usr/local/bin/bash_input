@@ -1,0 +1,10 @@
+#!/bin/bash
+BASH_INPUT_VALUE=""
+
+bash_input() {
+    echo ""
+    echo -e -n "\033[38;5;208m${1} :\033[0;00m"
+    read -p " " BASH_INPUT_VALUE
+}
+
+ 

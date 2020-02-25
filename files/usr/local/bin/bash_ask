@@ -1,0 +1,15 @@
+#!/bin/bash
+BASH_ASK_ANSWER=0
+
+while true; do
+    echo ""
+    echo -e -n "\033[38;5;208m${1} [y,n] :\033[0;00m"
+    read -p " " yn
+    case $yn in
+        [Yy]* ) BASH_ASK_ANSWER=1; break;;
+        [Nn]* ) BASH_ASK_ANSWER=0; break;;
+        * ) echo "Please answer yes or no.";;
+    esac
+done
+
+ 

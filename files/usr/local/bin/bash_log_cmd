@@ -1,0 +1,5 @@
+#!/bin/bash
+BASH_LOG_LEVEL=2
+
+echo -e "\033[38;5;45m> ${@}\033[0;00m"
+
