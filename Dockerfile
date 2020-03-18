@@ -8,6 +8,7 @@ RUN set -xe; \
     jq \
     mc \
     openjdk8-jre \
+    bash-completion \
     yarn && \
     wget -O drush.phar https://github.com/drush-ops/drush-launcher/releases/download/0.6.0/drush.phar && \
     chmod +x drush.phar && \
