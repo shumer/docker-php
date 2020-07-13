@@ -1,4 +1,4 @@
-FROM wodby/php:7.2
+FROM wodby/php:7.3
 USER root
 
 ADD ./files /srv
