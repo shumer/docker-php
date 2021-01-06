@@ -14,7 +14,8 @@ RUN set -xe; \
     chmod +x drush.phar && \
     mv drush.phar /usr/local/bin/drush && \
     echo "wodby ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers && \
-    cp -r /srv/usr/local/bin/ /usr/local/
+    cp -r /srv/usr/local/bin/ /usr/local/ && \
+    composer selfupdate
 
 USER wodby
 RUN  git clone --depth=1 https://github.com/Bash-it/bash-it.git /home/wodby/.bash_it  \
