@@ -29,7 +29,10 @@ RUN  git clone --depth=1 https://github.com/Bash-it/bash-it.git /home/wodby/.bas
      && git config --global alias.ci "commit" \
      && git config --global alias.st "status" \
      && git config --global alias.unstage "reset HEAD --" \
-     && git config --global alias.last "log -1 HEAD" \
-     && git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
+     && git config --global alias.last "log -1 HEAD" \     
+     && git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative" \
+     && echo "termtitle() { printf \"\033]0;\$*\007\"; }" >> ~/.bashrc \
+     && echo "termtitle \$TERMINAL_TITLE" >> ~/.bashrc
+
 
 WORKDIR /var/www/html
