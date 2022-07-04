@@ -1,10 +1,11 @@
-FROM wodby/php:7.2
+FROM wodby/php:8.1
 USER root
 
 ADD ./files /srv
 RUN set -xe; \
     apk add --update --no-cache \
     npm \
+    ncurses \
     jq \
     mc \
     openjdk8-jre \
